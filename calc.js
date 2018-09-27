@@ -4,7 +4,7 @@ const calculateBtn = document.querySelector('.calcBtn')
 
 // numbers
 let totalTax = 0
-let nettAnualSalary = 0
+let nettAnnualSalary = 0
 let nettMonthlySalary = 0
 let grossAnnualSalary = 0
 
@@ -37,14 +37,17 @@ function calculateTax(e) {
 }
 
 function calculateNettSalary() {
-  nettAnualSalary = grossAnnualSalary - totalTax
-  nettMonthlySalary = nettAnualSalary / 12
+  let UglyNettAnnualSalary = grossAnnualSalary - totalTax;
+  let UglyNettMonthlySalary = UglyNettAnnualSalary / 12
+  
+  nettAnnualSalary = Math.round(UglyNettAnnualSalary * 100) / 100
+  nettMonthlySalary = Math.round(UglyNettMonthlySalary * 100) / 100
   displayResult()
 }
 
 function displayResult() {
   result.innerHTML =  `
-  <p>Your annual nett salary is going to be <span>${nettAnualSalary}</span> kr.</p>
+  <p>Your annual nett salary is going to be <span>${nettAnnualSalary}</span> kr.</p>
   <p>That's <span>${nettMonthlySalary}</span> kr. per month.</p>
   `
   result.classList.toggle('display')
