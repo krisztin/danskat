@@ -1,6 +1,7 @@
 // elements
 const result = document.querySelector('.result')
 const calculateBtn = document.querySelector('.calcBtn')
+const form = document.querySelector('.calculator')
 
 // numbers
 let totalTax = 0
@@ -37,6 +38,7 @@ function calculateTax(e) {
 }
 
 function calculateNettSalary() {
+  form.reset()
   let UglyNettAnnualSalary = grossAnnualSalary - totalTax;
   let UglyNettMonthlySalary = UglyNettAnnualSalary / 12
   
