@@ -48,11 +48,12 @@ function calculateNettSalary() {
 }
 
 function displayResult() {
+  totalTax = 0
   result.innerHTML =  `
   <p>Your annual nett salary is going to be around <span>${nettAnnualSalary}</span> kr.</p>
   <p>That's <span>${nettMonthlySalary}</span> kr. per month.</p>
   `
-  result.classList.toggle('display')
+  result.classList.add('display')
 }
 
 calculateBtn.addEventListener('click', calculateTax)
