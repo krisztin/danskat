@@ -42,18 +42,22 @@ function calculateNettSalary() {
   let UglyNettAnnualSalary = grossAnnualSalary - totalTax;
   let UglyNettMonthlySalary = UglyNettAnnualSalary / 12
   
-  nettAnnualSalary = Math.round(UglyNettAnnualSalary * 100) / 100
-  nettMonthlySalary = Math.round(UglyNettMonthlySalary * 100) / 100
+  nettAnnualSalary = UglyNettAnnualSalary.toFixed(0)
+  nettMonthlySalary = UglyNettMonthlySalary.toFixed(0)
   displayResult()
 }
 
 function displayResult() {
   totalTax = 0
   result.innerHTML =  `
-  <p>Your annual nett salary is going to be around <span>${nettAnnualSalary}</span> kr.</p>
-  <p>That's <span>${nettMonthlySalary}</span> kr. per month.</p>
+  <p>Your annual nett salary is going to be around <span>${formatMoney(nettAnnualSalary)}</span> kr.</p>
+  <p>That's <span>${formatMoney(nettMonthlySalary)}</span> kr. per month.</p>
   `
   result.classList.add('display')
+}
+
+function formatMoney(salary) {
+  return Intl.NumberFormat().format(salary)
 }
 
 calculateBtn.addEventListener('click', calculateTax)
