@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Danish Income Tax Calculator - Danskat</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style-crass.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
           <label for="salary-yearly">
             <h2 class="stripped">Your annual gross salary</h2>
           </label>
-          <input type="number" name="salaryYearly" placeholder="Gross earning/year" required />
+          <input type="number" name="salaryYearly" placeholder="Gross earning/year" id="salary-yearly" required />
           <button class="calcBtn" type="submit">Calculate</button>
         </form>
         <div class="result">
@@ -74,7 +74,7 @@
           </label>
           <div class="answer">
             <p>Cleverly.</p>
-            <img src="https://media.giphy.com/media/JktexRco1Nsv6/giphy.gif">
+            <img src="https://media.giphy.com/media/JktexRco1Nsv6/source.gif" alt="" aria-hidden="true">
             <!-- html5 version, why you no workhttps://gph.to/2xSC6xz -->
             <p>In all seriousness <a href="https://www2.deloitte.com/content/dam/Deloitte/dk/Documents/tax/Deloitte-Working-living-in-Denmark.pdf">calculation
                 is based on a Deloitte .pdf</a> I randomly stumbled upon that used Copenhagen as an example with
@@ -126,7 +126,7 @@
           3.0 BY</a></p>
     </div>
   </footer>
-  <script src="calc.js"></script>
+  <script src="salary.min.js"></script>
 </body>
 
 </html>
