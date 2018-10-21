@@ -8,4 +8,4 @@ Use this calculator to find out your **approximate** salary.
 
 - tests!
 - allow monthly gross salary input
-- nicer number formatting
+- [x] nicer number formatting
