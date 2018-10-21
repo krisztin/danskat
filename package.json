@@ -1,0 +1,25 @@
+{
+  "name": "danskat",
+  "version": "1.0.0",
+  "description": "danish income tax calculator",
+  "main": "calc.js",
+  "dependencies": {
+    "node-minify": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "min-js": "node-minify --compressor babel-minify --input 'salary.js' --output 'salary.min.js'",
+    "min-css": "node-minify --compressor crass --input 'style.css' --output 'style-crass.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisztin/danskat.git"
+  },
+  "author": "krisztin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krisztin/danskat/issues"
+  },
+  "homepage": "https://github.com/krisztin/danskat#readme"
+}
