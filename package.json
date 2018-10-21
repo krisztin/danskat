@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jest",
     "min-js": "node-minify --compressor babel-minify --input 'salary.js' --output 'salary.min.js'",
-    "min-css": "node-minify --compressor crass --input 'style.css' --output 'style-crass.css'"
+    "min-css": "node-minify --compressor crass --input 'style.css' --output 'style-crass.css'",
+    "min-html": "node-minify --compressor html-minifier --input 'index-lg.html' --output 'index.html'"
   },
   "repository": {
     "type": "git",
