@@ -330,6 +330,11 @@ footer {
   .jumbo {
     font-size: 3rem;
   }
+
+  .intro {
+    align-self: flex-start;
+  }
+
   .row {
     flex-direction: column;
     align-items: center;
