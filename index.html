@@ -74,9 +74,7 @@
           </label>
           <div class="answer">
             <p>Cleverly.</p>
-            <video width="100%" playsinline autoplay muted loop aria-hidden="true">
-              <source src="https://media.giphy.com/media/JktexRco1Nsv6/giphy.mp4" type="video/mp4">
-            </video>
+            <div class="video-placeholder"></div>
             <p>In all seriousness&nbsp;<a href="https://www2.deloitte.com/content/dam/Deloitte/dk/Documents/tax/Deloitte-Working-living-in-Denmark.pdf">calculation
                 is based on a Deloitte .pdf</a>&nbsp;I randomly stumbled upon that used Copenhagen as an example with
               the following variables:
@@ -101,6 +99,22 @@
             </table>
           </div>
         </div>
+        <script>
+          const question = document.getElementById('question-one')
+          const placeholder = document.querySelector('.video-placeholder')
+          let firstClick = true
+
+          question.addEventListener("click", function() {
+            if (question.checked == true && firstClick == true) {
+              firstClick = false
+              placeholder.innerHTML = `
+                  <video playsinline autoplay muted loop aria-hidden="true">
+                    <source src="https://media.giphy.com/media/JktexRco1Nsv6/giphy.mp4" type="video/mp4">
+                  </video>
+                `
+            }
+          })
+        </script>
         <div class="question tbmr-sm">
           <input id="question-two" type="checkbox" name="tabs">
           <label for="question-two">
