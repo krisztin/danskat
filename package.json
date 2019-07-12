@@ -4,7 +4,7 @@
   "description": "danish income tax calculator",
   "main": "calc.js",
   "dependencies": {
-    "node-minify": "^3.5.1"
+    "node-minify": "^3.6.0"
   },
   "devDependencies": {},
   "scripts": {
